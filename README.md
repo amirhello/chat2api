@@ -1,6 +1,7 @@
 # 🌉 Chat Bridge DeepSeek
 
 این نسخه از `chat-bridge` فقط برای **DeepSeek** نوشته شده است. کارش این است که یک صفحهٔ گفتگوی مشخص DeepSeek را از طریق API محلی، شبیه API سازگار با OpenAI در اختیار DSH یا هر کلاینت دیگری بگذارد.
+<img width="415" height="739" alt="image" src="https://github.com/user-attachments/assets/18545335-d7fd-4e0d-a6c8-d91e2952c8d1" />
 
 ## ایدهٔ کار
 
