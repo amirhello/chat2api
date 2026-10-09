@@ -1,0 +1,22 @@
+# Chat Bridge DeepSeek — تنظیم پیشنهادی DSH
+#
+# ابتدا با `npm run key` کلید را بگیرید و این فایل را به settings.yaml اضافه کنید.
+# اگر DSH در هر request نمی‌تواند chat_url بفرستد، ابتدا از /v1/chat/target استفاده کنید.
+# tools و tool_choice از runtime خود DSH عبور می‌کنند و Bridge آن‌ها را به DSML ترجمه می‌کند.
+
+llm-pi-ai:
+  providers:
+    chat-bridge-deepseek:
+      api: openai-completions
+      baseURL: http://127.0.0.1:20258/v1
+      apiKey: <CHAT-BRIDGE-KEY>
+      models:
+        - id: deepseek
+          name: DeepSeek Browser Bridge
+          contextWindow: 131072
+          maxTokens: 16384
+
+# اختیاری:
+# agent-default-model:
+#   provider: chat-bridge-deepseek
+#   model: deepseek

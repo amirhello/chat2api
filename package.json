@@ -1,0 +1,26 @@
+{
+  "name": "chat-bridge-deepseek",
+  "version": "0.4.0",
+  "description": "OpenAI-compatible bridge for a user-selected DeepSeek browser conversation",
+  "private": true,
+  "type": "commonjs",
+  "main": "bridge/server.js",
+  "scripts": {
+    "start": "node bridge/server.js",
+    "dev": "node --watch bridge/server.js",
+    "key": "node bridge/print-key.js",
+    "test": "node tools/test-target-url.js && node tools/test-dom-response.js && node tools/test-dsml-parser.js && node tools/test-tool-prompt.js && node tools/test-continue-button.js && node tools/test-stream-hook.js && node tools/validate-extension.js && node --check bridge/server.js && node --check extension/background.js && node --check extension/content/dom-response.js && node --check extension/content/dsml-parser.js && node --check extension/content/deepseek-stream-hook.js && node --check extension/content/driver.js",
+    "test:e2e": "node tools/e2e-test.js",
+    "test:tool": "node tools/test-tool-protocol.js",
+    "test:cancel": "node tools/test-cancel.js",
+    "icons": "node tools/make-icons.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Bridge DeepSeek</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span class="logo">🌉</span>
+    <div>
+      <h1>Chat Bridge DeepSeek <span id="version"></span></h1>
+      <p>استفاده از یک گفتگوی مشخص DeepSeek</p>
+    </div>
+  </header>
+
+  <section class="card">
+    <div class="row">
+      <span>وضعیت اتصال</span>
+      <span id="connState" class="badge badge-off">قطع</span>
+    </div>
+    <div class="row">
+      <span>درخواست‌های جاری</span>
+      <span id="activeReq">—</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>آدرس گفتگوی DeepSeek</h2>
+    <input id="targetUrl" type="url" spellcheck="false"
+      placeholder="https://chat.deepseek.com/a/chat/s/...">
+    <button id="openTarget" class="btn btn-primary target-btn">باز کردن این گفتگو</button>
+    <p class="hint">همین URL را می‌توانی در درخواست API با فیلد <code>chat_url</code> هم بفرستی.</p>
+  </section>
+
+  <section class="card">
+    <h2>API Key</h2>
+    <p class="hint">کلید داخل API نمایش داده نمی‌شود. برای DSH آن را با <code>npm run key</code> بگیر.</p>
+  </section>
+
+  <div class="actions">
+    <button id="toggleBtn" class="btn btn-primary">شروع</button>
+    <button id="reloadBtn" class="btn">بارگذاری مجدد</button>
+  </div>
+
+  <section class="card">
+    <h2>تشخیص DOM</h2>
+    <button id="debugDom" class="btn">بررسی selector پاسخ</button>
+    <pre id="debugOutput" class="debug-output">هنوز بررسی نشده.</pre>
+  </section>
+
+  <footer>نسخهٔ محلی و مخصوص DeepSeek</footer>
+  <script src="popup.js"></script>
+</body>
+</html>
